@@ -1,53 +1,78 @@
-*, *:before, *:after {
-    box-sizing: inherit;
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    /* font */
+  box-sizing: border-box;
+  /* font */
+  font-family: "Shadows Into Light";
+  color: white;
+  font-size: 20px;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
 }
 
 body {
-    margin: 0;
-    }
-
-
-
-
+  margin: 0;
+}
 
 .panels {
-    min-height: 100vh;
-    display: flex;
-    overflow: hidden;
-   
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
 }
 
 .panel {
-    box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.1);
-background-position: center;
-display: flex;
-justify-content: center;
-align-items: center;
-background-size: cover;
-flex-direction: column;
-flex: 1;
+  box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.1);
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  flex-direction: column;
+  flex: 1;
+  transition: font-size 0.7s linear, flex 0.7s linear, background 2s ease-in-out;
+}
+.panel.active {
+  font-size: 45px;
+  flex: 4;
+  
+}
 
+.panel > * {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .9s;
 }
 
 
+.panel p:nth-child(2) {
+    font-size: 2em;
+  }
+
+.panel > *:first-child {transform: translateY(-120%);}
+.panel.open-active > *:first-child {transform: translateY(0);}
+.panel > *:last-child {transform: translateY(120%);}
+.panel.open-active > *:last-child {transform: translateY(0);}
 
 
-
-
-
-
-
-
-
-
-
-.panel1 {background-image: url("../images/1.jpg");}
-.panel2 {background-image: url("../images/2.jpg");}
-.panel3 {background-image: url("../images/3.jpg");}
-.panel4 {background-image: url("../images/4.jpg");}
-.panel5 {background-image: url("../images/5.jpg");}
+.panel1 {
+  background-image: url("../images/1.jpg");
+}
+.panel2 {
+  background-image: url("../images/2.jpg");
+}
+.panel3 {
+  background-image: url("../images/3.jpg");
+}
+.panel4 {
+  background-image: url("../images/4.jpg");
+}
+.panel5 {
+  background-image: url("../images/5.jpg");
+}
