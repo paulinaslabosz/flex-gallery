@@ -47,7 +47,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform .9s;
+  transition: transform .7s;
 }
 
 
