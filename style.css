@@ -14,11 +14,40 @@ body {
 
 
 
-    
-.container {
-    width: 100px;
+
+.panels {
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+   
 }
 
-.image {
-    width: 100px;
+.panel {
+    box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.1);
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+background-size: cover;
+flex-direction: column;
+flex: 1;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.panel1 {background-image: url("../images/1.jpg");}
+.panel2 {background-image: url("../images/2.jpg");}
+.panel3 {background-image: url("../images/3.jpg");}
+.panel4 {background-image: url("../images/4.jpg");}
+.panel5 {background-image: url("../images/5.jpg");}
