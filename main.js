@@ -1,12 +1,14 @@
 const flexPanels = document.querySelectorAll('.panel')
 
 
-function toggleImage () {
+function toggleImage() {
+    flexPanels.forEach(panel => panel.classList.remove('active'))
     this.classList.toggle('active')
 }
 
+
 function toggleOpen(e) {
-    console.log(e.propertyName);
+    console.log(e);
     if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active')
     }
