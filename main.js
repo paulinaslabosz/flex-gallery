@@ -4,6 +4,7 @@ const flexPanels = document.querySelectorAll('.panel')
 function toggleImage() {
     flexPanels.forEach(panel => panel.classList.remove('active'))
     this.classList.toggle('active')
+    
 }
 
 
